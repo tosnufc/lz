@@ -1,0 +1,70 @@
+{
+  "clicks": [
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 0
+    },
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 1
+    },
+        {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 0
+    },
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 1
+    },
+        {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 0
+    },
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 1
+    },
+        {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 0
+    },
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 1
+    },
+        {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 0
+    },
+    {
+      "type": "click",
+      "x": 1424,
+      "y": 755,
+      "delay": 1
+    },
+    {
+      "type": "click",
+      "x": 1123,
+      "y": 545,
+      "delay": 3.44
+    }
+  ]
+}
