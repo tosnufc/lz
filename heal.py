@@ -29,19 +29,27 @@ for seq in range(1, REPEAT_COUNT + 1):
     print(f"\n>>> Sequence {seq}/{REPEAT_COUNT}")
     print("-" * 40)
     
-    # Execute each click in the sequence
-    for i, click in enumerate(clicks, 1):
-        x, y = click["x"], click["y"]
-        delay = click["delay"]
-        
-        # Wait before click (skip delay for first click)
+    # Execute each action in the sequence
+    for i, action in enumerate(clicks, 1):
+        x, y = action["x"], action["y"]
+        delay = action["delay"]
+        action_type = action.get("type", "click")  # default to "click" for old recordings
+
+        # Wait before action (skip delay for first action)
         if delay > 0:
             print(f"Waiting {delay}s...")
             time.sleep(delay)
-        
-        # Perform click
-        print(f"Click {i}: ({x}, {y})")
-        pyautogui.click(x, y)
+
+        if action_type == "scroll":
+            dx, dy = action.get("dx", 0), action.get("dy", 0)
+            print(f"Scroll {i}: ({x}, {y}) dx={dx} dy={dy}")
+            if dx:
+                pyautogui.hscroll(dx, x=x, y=y)
+            if dy:
+                pyautogui.scroll(dy, x=x, y=y)
+        else:
+            print(f"Click {i}: ({x}, {y})")
+            pyautogui.click(x, y)
     
     # Wait between sequences (skip after last sequence)
     if seq < REPEAT_COUNT:
